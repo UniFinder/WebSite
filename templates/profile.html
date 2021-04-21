@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Search {% endblock %}
+{% block style %}{% endblock %}
+{% block body %}
+<style>
+.container {
+        background: #4CAF50;
+        }
+.card {
+        background: #77ceae;
+        }
+.button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+        .button4 {border-radius: 12px;}
+</style>
+<h1 align="center">Favoutites</h1>
+
+
+
+<div class="card" id = "element1">
+
+<div class="container" align="center">
+
+        <h4><b>Name: Technical University of Munich</b></h4>
+        <p>Country: Germany</p>
+        <p>Major: Computer Science</p>
+        <p>Estemated price: 10000 $</p>
+
+            <button> <a href="https://www.tum.de/en/" target="_blank" >Visit their website</a></button>
+            <button>Remove from favourite</button>
+    
+    
+    
+</div>
+</div>
+
+  {% endblock %}
+
+
