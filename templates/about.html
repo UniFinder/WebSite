@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %} About {% endblock %}
+
+{% block style %}
+
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #85dcbc;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {
+padding:20px;
+text-align: center;
+background: #41b3a3;
+}
+.contento {
+padding:20px;
+text-align: center;
+background: #85dcbc;
+color: white;
+}
+
+{% endblock %}
+{% block body %}
+
+<img src={{url_for('static', filename='pictures/about-background-2.png')}} alt="Responsive image" style="width:1684px;height:860px;">
+
+
+<div class="content">
+  <h1><b>Александър Велев</b></h1>
+  <p>Клас: 9g</p>
+  <p>Back end</p>
+  <p>Любим цвят: червено</p>
+</div>
+
+<div class="contento">
+	<h1><b>&</b></h1>
+</div>
+
+<div class="content">
+  	<h1><b>Андрей Ежков</b></h1>
+	<p>Клас: 9g</p>
+  	<p>Front end</p>
+	<p>Любим цвят: синьо</p>
+</div>
+
+{% endblock %}

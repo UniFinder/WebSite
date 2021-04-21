@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %} Contact {% endblock %}
+
+{% block style %}
+
+.searchgrid{
+	display: grid;
+	grid-auto-rows:110px;
+	height: 1000px;
+	grid-template-columns: 29% 42% 29%;
+	grid-template-rows: 430px auto;
+	text-align: center;
+}
+.searchgrid > div{
+	background:#c38d9e;
+	padding:10px;
+}
+
+#sel{
+    width: 695px;
+    height: 40px;
+}
+
+{% endblock %}
+{% block body %}
+
+<img src={{url_for('static', filename='pictures/contact-background-2.png')}} alt="Responsive image" style="width:1684px;height:860px;">
+
+
+<div class="searchgrid">
+		<div>
+		</div>
+		<div>
+            <form action="" method="post">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label text-center">Email address:</label>
+              <input type="email" class="form-control text-center" id="exampleFormControlInput1" placeholder="email@example.com" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Share with us:</label>
+              <textarea class="form-control text-center" id="exampleFormControlTextarea1" rows="3" name="mess"></textarea>
+            </div>
+            <p><input type="submit" value="submit"/></p>
+            </form>
+        </div>
+		<div>
+
+		</div>
+</div>
+
+{% endblock %}

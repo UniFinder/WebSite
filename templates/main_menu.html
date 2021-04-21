@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock%}
+
+{% block style %}
+
+.container1 {
+  height: 120px;
+  max-width: 10000px;
+  position: relative;
+  background: #e8a87c;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.button {
+  background-color: #c38d9e;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+.button:hover {
+  background-color: white;
+  color: #c38d9e;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  background-color: #41b3a3;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: #85dcbc;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+{% endblock%}
+
+{% block body %}
+
+<!-- class="rounded" -->
+<img src={{url_for('static', filename='pictures/home-background-6.png')}} alt="Responsive image" style="width:1684px;height:735px;">
+
+
+<div class="container1">
+  <div class="vertical-center">
+    <button class="button" href="search"><b>Search now !</b></button>
+  </div>
+</div>
+
+
+
+<div class="grid-container">
+  <div class="grid-item">news 1</div>
+  <div class="grid-item">news 2</div>
+  <div class="grid-item">news 3</div>
+</div>
+
+
+{% endblock %}
+

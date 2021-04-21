@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %} Search {% endblock %}
+
+{% block style %}
+
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #85dcbc;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {
+padding:20px;
+}
+
+
+
+.searchgrid{
+	display: grid;
+	grid-auto-rows:110px;
+	height: 1000px;
+	grid-template-columns: 29% 42% 29%;
+	grid-template-rows: 430px auto;
+	text-align: center;
+}
+.searchgrid > div{
+	background:#e8a87c;
+	padding:10px;
+}
+
+#sel{
+    width: 695px;
+    height: 40px;
+}
+
+{% endblock %}
+
+{% block body %}
+
+<img src={{url_for('static', filename='pictures/search-background-2.png')}} alt="Responsive image" style="width:1684px;height:860px;">
+
+<div class="searchgrid">
+		<div>
+		</div>
+		<div>
+			<form action="" method="post">
+				<p>Specialty:</p>
+				<select class="form-control form-control-lg" name="specialty" id="sel">
+					<option>Linguistics</option>
+					<option>Maths</option>
+					<option>Physics</option>
+					<option>Computer Science</option>
+					<option>Networking</option>
+					<option>Fine/Studio Arts</option>
+					<option>Cinema/Film</option>
+					<option>Cinematography/Film/Vide Production</option>
+					<option>Dance</option>
+					<option>Design & Visual Communications, General</option>
+					<option>Fashion/Apparel Design</option>
+					<option>Graphic Design</option>
+					<option>Industrial Design</option>
+					<option>Interior Design</option>
+					<option>Music, General</option>
+					<option>Music, Performance</option>
+					<option>Music, Theory & Composition</option>
+					<option>Photography</option>
+					<option>Theatre Arts/Drama</option>
+					<option>Accounting</option>
+					<option>Accounting Technician</option>
+					<option>Business Administration & Management, General</option>
+					<option>Hotel/Motel Management</option>
+					<option>Human Resources Development/Training</option>
+					<option>Human Resources Management</option>
+					<option>International Business Management</option>
+					<option>Labor/Industrial Relations</option>
+					<option>Logistics & Materials Management</option>
+					<option>Marketing Management & Research</option>
+					<option>Office Supervision & Management</option>
+					<option>Operations Management & Supervision</option>
+					<option>Organizational Behavior</option>
+					<option>Purchasing/Procurement/Contracts Management</option>
+					<option>Restaurant/Food Services Management</option>
+					<option>Small Business Management/Operations</option>
+					<option>Travel/Tourism Management</option>
+				</select>
+				<p>Degree:</p>
+				<select class="form-control form-control-lg" name="degree" id="sel">
+					<option>Bachelor's</option>
+					<option>Masters</option>
+					<option>Doctoral</option>
+				</select>
+				<p>Country:</p>
+				<select class="form-control form-control-lg" name="country" id="sel">
+					<option>Afghanistan</option>
+					<option>Bolivia</option>
+					<option>Bulgaria</option>
+					<option>Columbia</option>
+					<option>Canada</option>
+					<option>Denmark</option>
+					<option>Estonia</option>
+					<option>England</option>
+					<option>Germany</option>
+					<option>Hungary</option>
+					<option>Italy</option>
+					<option>Japan</option>
+					<option>Korea</option>
+					<option>Latviav</option>
+					<option>Malta</option>
+					<option>Nigeria</option>
+					<option>Oman</option>
+					<option>Portugal</option>
+					<option>Qatar</option>
+					<option>Russia</option>
+					<option>Serbia</option>
+					<option>Tajikistan</option>
+					<option>USA</option>
+					<option>Vietnam</option>
+					<option>Württemberg</option>
+					<option>Yemen</option>
+					<option>Zimbabwe</option>
+				</select>
+				<p>Price range:</p>
+				<select class="form-control form-control-lg" name="price" id="sel">
+					<option>5000 € </option>
+					<option>10000 €</option>
+					<option>15000 €</option>
+					<option>20000 €</option>
+					<option>25000 €</option>
+				</select>
+				|
+				<p><input type="submit" value="submit"/></p>
+			</form>
+		</div>
+		<div>
+
+		</div>
+</div>
+
+
+
+{% endblock %}
