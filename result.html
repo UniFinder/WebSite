@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %} Search {% endblock %}
+{% block style %}{% endblock %}
+{% block body %}
+<style>
+.container {
+        background: #47b48c;
+        }
+.card {
+        background: #77ceae;
+        }
+.button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+        .button4 {border-radius: 12px;}
+</style>
+<h1 align="center">Resluts</h1>
+{% for text in text1 %}
+<img src="{{ text[6] }}" alt="User Image" style="width:1905px;height:603px;">
+
+
+<div class="card" id = "element1">
+
+
+
+<div class="container" align="center">
+
+        <h4><b>Name: {{ text[0] }}</b></h4>
+        <p>Country: {{ text[1]}}</p>
+        <p>Major: {{ text[2] }}</p>
+        <p>Estemated price: {{ text[3] }} $</p>
+
+            <button> <a href="{{text[4]}}" target="_blank" >Visit their website</a></button>
+            <button>Select as favourite</button>
+    
+    
+    
+</div>
+</div>
+{% endfor %}
+
+
+  {% endblock %}
+
+
